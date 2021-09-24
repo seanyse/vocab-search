@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, user-scalable=yes" /><title>
+	StudentVUE
+</title><meta content="en-US" name="language" /><meta content="private - general audiences" name="rating" /><meta content="2005 - Edupoint,Inc" name="copyright" /><meta content="Edupoint, LLC" name="author" /><link rel="Shortcut Icon" href="synergy.ico" />
+
+    <script type="text/javascript">
+        var OEN = { Configurations: {} };
+        window.PXP = window.PXP || { Translations: {} };
+        window.ST = window.ST || {};
+        window.ST.Translations = window.ST.Translations || {};
+        ST.NFAList = ST.NFAGlobalList = '<REV_RETURN/>';
+
+        PXP.UseGoogleAPI = false;
+	ST.Impersonated = false;
+	ST.VideoConferenceLicensed = true;
+	ST.VideoConferenceEnabled = false;
+	ST.VideoConferenceConfigured = false;
+	ST.ImpersonateCanJoin = false;
+	PXP.Translations.ReportTryAgain = 'The document is being built.  Please try again in a few moments.';
+	PXP.AccessibilityMode = false;
+	PXP.UsePXP2Interface = true;
+	
+    </script>
+
+    
+<script id="ctl00_Loader" type="text/javascript">window.LoadRemoteScript = function (resourceClientID, url) {
+var resourceSelector = '[id*=' + resourceClientID + ']';
+if ($(resourceSelector).length == 0) {
+var Script = document.createElement('script');
+Script.src = url;
+Script.async = false;
+Script.defer = true;
+Script.id = resourceClientID;
+document.head.appendChild(Script);
+};
+};
+window.LoadLocalStyleSheet = function (resourceClientID, text) {
+var resourceSelector = '[id*=' + resourceClientID + ']';
+if ($(resourceSelector).length == 0) {
+var Script = document.createElement('script');
+Script.type='text/css';
+Script.id = resourceClientID;
+Script.innerHTML = text;
+document.head.appendChild(Script);
+};
+};
+window.LoadRemoteStyleSheet = function (resourceClientID, url) {
+var resourceSelector = '[id*=' + resourceClientID + ']';
+if ($(resourceSelector).length == 0) {
+if (document.createStyleSheet) {
+document.createStyleSheet(url);
+} else {
+$('<link>')
+.appendTo('head')
+.attr({type : 'text/css', rel : 'stylesheet'})
+.attr({id : resourceClientID})
+.attr('href', url);
+}
+};
+};
+</script><link id="ctl00_Schemes_font-awesome_min_css" href="/Schemes/font-awesome.min.css?2021-04-14T20%3a22%3a00.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_Schemes_PXP2_PXP2_Global_css" href="/Schemes/PXP2/PXP2_Global.css?2021-04-14T20%3a22%3a00.0000000" type="text/css" rel="stylesheet"></link><link id="ctl00_Schemes_PXP_Form_css" href="/Schemes/PXP_Form.css?2021-04-14T20%3a22%3a00.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_js_ST_es6-promise_auto_min_js" src="/js/ST/es6-promise.auto.min.js?2021-04-14T20%3a22%3a00.0000000" type="text/javascript"></script><script id="ctl00_js_PXP_json2_min_js" src="/js/PXP/json2.min.js?2021-04-14T20%3a22%3a00.0000000" type="text/javascript"></script><script id="ctl00_GBResources_gbapp_pvue_js" src="/resources/GBResources/gbapp_pvue.js?2021-08-18T17%3a30%3a00.0000000" type="text/javascript"></script><script id="ctl00_GBResources_jquery_min_js" src="/resources/GBResources/jquery_min.js?2021-08-18T17%3a30%3a00.0000000" type="text/javascript"></script><link id="ctl00_GBResources_jquery_ui_min_css" href="/resources/GBResources/jquery_ui_min.css?2021-08-18T17%3a30%3a00.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_GBResources_jquery_ui_min_js" src="/resources/GBResources/jquery_ui_min.js?2021-08-18T17%3a30%3a00.0000000" type="text/javascript"></script><link id="ctl00_GBResources_pnotify_min_css" href="/resources/GBResources/pnotify_min.css?2021-08-18T17%3a30%3a00.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_GBResources_pnotify_min_js" src="/resources/GBResources/pnotify_min.js?2021-08-18T17%3a30%3a00.0000000" type="text/javascript"></script><script id="ctl00_GBResources_knockout_latest_js" src="/resources/GBResources/knockout_latest.js?2021-08-18T17%3a30%3a00.0000000" type="text/javascript"></script><script id="ctl00_js_PXP_PXP_jquery_ui_touch-punch_min_js" src="/js/PXP/PXP_jquery.ui.touch-punch.min.js?2021-04-14T20%3a22%3a00.0000000" type="text/javascript"></script><script id="ctl00_js_PXP_PXPUtility_js" src="/js/PXP/PXPUtility.js?2021-04-14T20%3a22%3a00.0000000" type="text/javascript"></script><link id="ctl00_GBResources_bootstrap_3_min_css" href="/resources/GBResources/bootstrap_3_min.css?2021-08-18T17%3a30%3a00.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_GBResources_bootstrap_3_min_js" src="/resources/GBResources/bootstrap_3_min.js?2021-08-18T17%3a30%3a00.0000000" type="text/javascript"></script><link id="ctl00_Schemes_PXP2_PXP2_login_css" href="/Schemes/PXP2/PXP2_login.css?2021-04-14T20%3a22%3a00.0000000" type="text/css" rel="stylesheet"></link><script id="ctl00_js_PXP_PXP2_Login_js" src="/js/PXP/PXP2_Login.js?2021-04-14T20%3a22%3a00.0000000" type="text/javascript"></script><style id="ctl00_PXPColorTheme" type="text/css">
+    body {
+        background-color: #bb0000;
+    }
+    
+    .panel-default > .panel-heading,
+    .panel-default > .panel-footer,
+    .panel-default > .panel-footer a {
+        background-color: #c8c7c7;
+        color: #000000;
+    }
+    
+    #LoginHeading, 
+    #LoginPVUE, 
+    #LoginSVUE, 
+    #DistrictName,
+    #Greeting,
+    .oen-nav-header,
+    body .container>h1 {
+        color: #FFFFFF !important;
+    }
+    </style><link id="ctl00_Schemes_PXP2_PXP2_LanguageBar_css" href="/Schemes/PXP2/PXP2_LanguageBar.css?2021-04-14T20%3a22%3a00.0000000" type="text/css" rel="stylesheet"></link></head>
+<body id="ctl00_MainBody" class="browser-Chrome bver-89_0">
+    
+    
+
+    <div aria-label="Accessiblity Options" class="sr-only">
+        <a href="accessibility.html" target="_blank">Synergy Accessibility Tips</a>
+        <a href="#" role="button" id="AccessButton" data-action="ToggleAccessibleMode">Accessibility Mode</a>
+    </div>
+
+    <header id="ctl00_MobileHeader" class="mobile-header"></header>
+
+    
+        <div class="PXPHeaderLogo">
+            <img src="Photos/8D/8D749524-419B-4CB2-BEAE-134B947A853D_PXPHeaderLogo.PNG?637272873600000000" alt="District Logo" width="240" height="70" />
+        </div>
+    
+
+    <div class="container">
+        <div id="USER_ERROR"></div>
+
+        
+    <h1 id="LoginSVUE">StudentVUE Account Access</h1>
+
+    <div class="equal">
+        <div class="login-content" style="margin: auto">
+            
+
+            <div class="panel panel-default" style="width:100%">
+                <h2 id="ctl00_MainContent_LoginMessage" class="panel-heading">Login</h2>
+                <div class="panel-body">
+                    <span id="DistrictName">Cobb County School District</span>
+
+                    <form name="aspnetForm" method="post" action="./PXP2_Login_Student.aspx?regenerateSessionId&amp;regenerateSessionId=True" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Imd4cusqPkIac8AW3h6WsEB/qaFUY/h/dAmtYW8t/cUcDbTy5HUT4mc19xXLK1bFI5tO06KwvxCMNYrYuCyLxpUbOaEX7ggbYbIfMjDdhfU=" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+window.LoadRemoteStyleSheet('Schemes_font-awesome_min_css', '/Schemes/font-awesome.min.css?2021-04-14T20%3a22%3a00.0000000');
+window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_Global_css', '/Schemes/PXP2/PXP2_Global.css?2021-04-14T20%3a22%3a00.0000000');
+window.LoadRemoteStyleSheet('Schemes_PXP_Form_css', '/Schemes/PXP_Form.css?2021-04-14T20%3a22%3a00.0000000');
+window.LoadRemoteScript('js_ST_es6-promise_auto_min_js', '/js/ST/es6-promise.auto.min.js?2021-04-14T20%3a22%3a00.0000000');
+window.LoadRemoteScript('js_PXP_json2_min_js', '/js/PXP/json2.min.js?2021-04-14T20%3a22%3a00.0000000');
+window.LoadRemoteScript('GBResources_gbapp_pvue_js', '/resources/GBResources/gbapp_pvue.js?2021-08-18T17%3a30%3a00.0000000');
+window.LoadRemoteScript('GBResources_jquery_min_js', '/resources/GBResources/jquery_min.js?2021-08-18T17%3a30%3a00.0000000');
+window.LoadRemoteStyleSheet('GBResources_jquery_ui_min_css', '/resources/GBResources/jquery_ui_min.css?2021-08-18T17%3a30%3a00.0000000');
+window.LoadRemoteScript('GBResources_jquery_ui_min_js', '/resources/GBResources/jquery_ui_min.js?2021-08-18T17%3a30%3a00.0000000');
+window.LoadRemoteStyleSheet('GBResources_pnotify_min_css', '/resources/GBResources/pnotify_min.css?2021-08-18T17%3a30%3a00.0000000');
+window.LoadRemoteScript('GBResources_pnotify_min_js', '/resources/GBResources/pnotify_min.js?2021-08-18T17%3a30%3a00.0000000');
+window.LoadRemoteScript('GBResources_knockout_latest_js', '/resources/GBResources/knockout_latest.js?2021-08-18T17%3a30%3a00.0000000');
+window.LoadRemoteScript('js_PXP_PXP_jquery_ui_touch-punch_min_js', '/js/PXP/PXP_jquery.ui.touch-punch.min.js?2021-04-14T20%3a22%3a00.0000000');
+window.LoadRemoteScript('js_PXP_PXPUtility_js', '/js/PXP/PXPUtility.js?2021-04-14T20%3a22%3a00.0000000');
+window.LoadRemoteStyleSheet('GBResources_bootstrap_3_min_css', '/resources/GBResources/bootstrap_3_min.css?2021-08-18T17%3a30%3a00.0000000');
+window.LoadRemoteScript('GBResources_bootstrap_3_min_js', '/resources/GBResources/bootstrap_3_min.js?2021-08-18T17%3a30%3a00.0000000');
+window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_login_css', '/Schemes/PXP2/PXP2_login.css?2021-04-14T20%3a22%3a00.0000000');
+window.LoadRemoteScript('js_PXP_PXP2_Login_js', '/js/PXP/PXP2_Login.js?2021-04-14T20%3a22%3a00.0000000');
+window.LoadLocalStyleSheet('PXPColorTheme', '    body {        background-color: #bb0000;    }        .panel-default > .panel-heading,    .panel-default > .panel-footer,    .panel-default > .panel-footer a {        background-color: #c8c7c7;        color: #000000;    }        #LoginHeading,     #LoginPVUE,     #LoginSVUE,     #DistrictName,    #Greeting,    .oen-nav-header,    body .container>h1 {        color: #FFFFFF !important;    }    ');
+window.LoadRemoteStyleSheet('Schemes_PXP2_PXP2_LanguageBar_css', '/Schemes/PXP2/PXP2_LanguageBar.css?2021-04-14T20%3a22%3a00.0000000');
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E13CECB1" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="0ysi3HKQAIe25vtngMvaLpL0hge6+kGCIjy6HLl6V4AiCzKCPKfibvkFTwt3eWF9gh3wi4S3J1d1nEb6NlNINuN1CEI19CzXUGpq41axYwM+dS2/72pPP7FskgINmdzX9KBmVIHHQNP2A0fSkMjGEcWgYK+abA0OLL3N8SMsqQc=" />
+</div>
+                        <div class="form-group">
+                            <label id="LoginUserName" for="ctl00_MainContent_username">User Name:</label>
+                            <input name="ctl00$MainContent$username" type="text" id="ctl00_MainContent_username" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label id="LoginPassword" for="ctl00_MainContent_password">Password:</label>
+				            <input name="ctl00$MainContent$password" type="password" id="ctl00_MainContent_password" class="form-control" />
+                            <div class="pxp-forgot-password-link">
+                                
+                            </div>
+                        </div>
+                        <div class="form-group center">
+				            <input name="ctl00$MainContent$Submit1" type="submit" id="ctl00_MainContent_Submit1" value="Login" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="login-more">
+                    <div class="expander">
+                        <span class="btn-more" data-action="ToggleMoreOptions">
+                            More Options
+                            <i class="glyphicon"></i>
+                        </span>
+                    </div>
+                    <div class="more-options">
+                        <p id="ctl00_MainContent_ActMsgNoLink" align="center"><span class="largeText">
+                            Contact your school if you do not have your account details.
+                        </span></p>
+
+                        <ul>
+                            
+                            <li></li>
+
+                            
+                            <li class="separator" role="separator"></li>
+                            <li><a class="pxp-login-more-link" href="https://itunes.apple.com/us/app/studentvue/id412050327?mt=8">
+                                <i class="fa fa-apple" style="color:#0000ff"></i>
+                                <span>iPhone App</span>
+                            </a></li>
+                            <li><a class="pxp-login-more-link" href="https://market.android.com/details?id=com.FreeLance.StudentVUE">
+                                <i class="fa fa-android" style="color:#00ff00"></i> 
+                                <span>Android App</span>
+                            </a></li>
+                            <li><span class="pxp-login-more-link">
+                                <i class="fa fa-link" style="color:#000088"></i>
+                                <span>Mobile App URL</span>
+                                <span style="font-size:12px">https://parentvue.cobbk12.org</span>
+                            </span></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel-footer" style="text-align:left; padding:5px">
+                    <div id="ctl00_MainContent_ctl01_Languages" class="languages" role="region" aria-label="Languages">
+    <ul class="languages">
+        
+                <li><a title="English" href="/PXP2_Login_Student.aspx?regenerateSessionId&regenerateSessionId=True&LNG=00" data-is-current="True">English </a></li>
+            
+                <li><a title="Spanish" href="/PXP2_Login_Student.aspx?regenerateSessionId&regenerateSessionId=True&LNG=26" data-is-current="False">Español </a></li>
+            
+    </ul>
+</div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row center">
+        <span id="ctl00_MainContent_ERROR"></span>
+    </div>
+
+    </div>
+
+    <footer id="ctl00_PXPFooter" class="footer hide-for-print" aria-label="Footer">
+        <div class="action-bar">
+            <div role="region" aria-label="System links" id="SystemLinks">
+                <ul class="system-links">
+                    
+                        <li><a href="PXP2_Login.aspx?Logout=1" id="ctl00_lnkLogin">Return to common login</a></li>
+                    
+                    <li><a href="PXP2_Contact.aspx" id="ctl00_lnkContact">Contact</a></li>
+                    <li><a href="PXP2_Privacy.aspx" id="ctl00_lnkPrivacy">Privacy</a></li>
+                </ul>
+            </div>
+
+            <div id="ctl00_ctl10_Languages" class="languages" role="region" aria-label="Languages">
+    <ul class="languages">
+        
+                <li><a title="English" href="/PXP2_Login_Student.aspx?regenerateSessionId&regenerateSessionId=True&LNG=00" data-is-current="True">English </a></li>
+            
+                <li><a title="Spanish" href="/PXP2_Login_Student.aspx?regenerateSessionId&regenerateSessionId=True&LNG=26" data-is-current="False">Español </a></li>
+            
+    </ul>
+</div>
+
+
+
+        </div>
+
+        <div id="legal" class="center">
+            <a target="_blank" href="http://www.edupoint.com/">
+                <img border="0" style="padding-bottom: 3px; border: 0px" alt="Edupoint Educational Systems" src="Images/ST_Revelation/EduPointLogo_WHITE.png"></a>
+            <br />
+            &copy;Copyright 2021 Edupoint, LLC
+        </div>
+
+        <div id="accessToggle">
+            <i class="glyphicon glyphicon-ok checked"></i>
+            <a href="#" role="button" data-action="ToggleAccessibleMode">Accessibility Mode</a>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

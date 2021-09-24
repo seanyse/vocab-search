@@ -1,0 +1,570 @@
+/* disable img dragging */
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+
+  }
+  /* disable user highligt */
+  :not(input):not(textarea),
+  :not(input):not(textarea)::after,
+  :not(input):not(textarea)::before {
+      -webkit-user-select: none;
+      user-select: none;
+      cursor: default;
+
+  }
+  ::-webkit-input-placeholder {
+    color: grey;
+    text-align: center;
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: grey;
+    text-align: center;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: grey;
+    text-align: center;
+}
+:-ms-input-placeholder {
+    color: grey;
+    text-align: center;
+}
+/* placeholder center */
+::placeholder {
+  color: grey;
+  line-height: 50vh;
+  text-align: center;
+  overflow: hidden;
+  
+  }
+.status::placeholder{
+  color: grey;
+  line-height: 3vh;
+  text-align: center;
+  overflow: hidden;
+  font-size:small;
+  
+  }
+.psetting::placeholder {
+  color: grey;
+  line-height: 35vh;
+  text-align: center;
+  overflow: hidden;
+  
+  }
+.psearchp::placeholder{
+  color: grey;
+  line-height: 35vh;
+  text-align: center;
+  overflow: hidden;
+  font-size:small;
+  
+  }
+
+  textarea {
+    resize: none;
+  }
+
+.menu {
+    height: 15%;
+    width: 100%;
+    
+    
+
+}
+.textArea {
+    height: 70%;
+    width: 80%;
+    float: right;
+}
+  .logo {
+      width: 30%;
+      height: 30%;
+      float: right;
+      text-align:center;
+     
+  
+  }
+  
+  h1 {
+      color: white;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      margin-bottom: .2%;
+  }
+  h2 {
+      color: grey;
+      font-family: 'Oswald', sans-serif;
+      /* text-transform: uppercase; */
+      margin-top: .3%;
+  }
+  h3 {
+    color: grey;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: .2%;
+  }
+  
+  
+  input[type=text], select {
+      background-color:rgb(35, 35, 35);
+      width: 99%;
+      
+      padding: 15px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid rgb(41, 41, 41);
+      border-bottom: 4px;
+      box-sizing: border-box;
+      color:white
+    }
+  
+
+  
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
+    button[type=submit] {
+      
+      background-color: rgb(45, 143, 241);
+      border: none;
+      color: white;
+      padding: 12px 16px;
+      font-size: 85%;
+      cursor: pointer;
+      
+      border-width: .1%;
+      margin-right: 1%;
+    }
+    
+    button[type=submit]:hover {
+      width: 60%;
+      
+      background-color: RoyalBlue;
+      border: none;
+      color: white;
+      padding: 12px 16px;
+      font-size: 85%;
+      cursor: pointer;
+      
+      border-width: .1%;
+      margin-right: 1%;
+    }
+    
+.search {
+    color: white;
+    padding: 12px 16px;
+    float: right;
+    border-width: .1%;
+    height: 8%;
+    
+    }
+
+
+.logo {
+    width: 10%;
+    height: auto;
+    margin: 0%;
+}
+.container {
+    width: 80%;
+    float: right;
+    height: 100%;
+}
+
+.result {
+    float: right;
+}
+
+
+
+.input {
+    float: left;
+    width: 48%;
+    height: 80%;
+    height: 68vh;
+    
+    
+    }
+
+    
+  .vocab{
+    color: white;
+    width: 93%;
+    height: 90%;
+    background-color:rgb(35, 35, 35);
+    border: 1px solid rgb(41, 41, 41);
+    border-width: .1px;
+    font-size:small;
+    padding: 4% 4% 4% 4%;
+    
+    
+
+    }
+.result {
+    
+  width: 48%;
+  margin-right: 2%;
+  height: 68vh;
+  }
+
+.output {
+  color: white;
+  width: 93%;
+  height: 90%;  
+    background-color:rgb(35, 35, 35);
+    border: 1px solid rgb(41, 41, 41);
+    border-width: .1px;
+    font-size:small;
+    padding: 4% 4% 4% 4%;
+    
+}
+.psetting {
+  color: white;
+
+  border: 1px solid rgb(41, 41, 41);
+  border-width: .1px;
+  font-size:small;
+  padding: 2% 2% 2% 2%;
+  margin-left:2%; 
+  width: 43%; 
+  height:85%; 
+  float: left; 
+  background-color:rgb(49, 49, 49);
+  
+}
+
+.psearchp {
+  
+  color: white;
+  height: 40%;
+  background-color:rgb(35, 35, 35);
+  border: 1px solid rgb(41, 41, 41);
+  border-width: .1px;
+  font-size:small;
+  padding: 2% 2% 2% 2%;
+    
+  
+    
+}
+.statusContainer {
+    
+  width: 99%;
+  height: 15%;
+  margin-right: 1%;
+  margin-top: 1%;
+  float: right;
+  overflow: hidden;
+  
+  
+  }
+
+.status {
+  color: white;
+  width: 100%;
+  height: 3%;
+  background-color:rgb(35, 35, 35);
+  border: 1px solid rgb(41, 41, 41);
+  border-width: .1px;
+  font-size:small;
+  padding: 1.2% 1% 0% 0%;
+  text-align: center;
+
+  
+}
+.buttons {
+  width: 19%;
+  height: 100%;
+  overflow: hidden;
+}
+.home {
+  width: 46%;
+  background-color: rgba(169, 169, 169, 0.231); /* Green */
+  border: none;
+  color: white;
+  padding: 8% 12%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 150%;
+  margin-right: 2%;
+  
+}
+.home:hover {
+  background-color: rgba(169, 169, 169, 0.176);
+}
+
+.control {
+  margin-top: 2%;
+  background-color: rgba(169, 169, 169, 0.231); /* Green */
+  border: none;
+  color: white;
+  padding: 8.4% 12%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 150%;
+  margin-right: 2%;
+  width: 96.9%;
+}
+.control:hover {
+  background-color: rgba(169, 169, 169, 0.176);
+}
+.control-start {
+  border: none;
+  color: white;
+  padding: 8.4% 12%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 150%;
+  margin-right: 2%;
+  width: 96.9%;
+  margin-top: 7%; background-color: rgba(132, 220, 189, 0.646);
+}
+.control-start:hover {
+  background-color: rgba(132, 220, 189, 0.496);
+}
+.control-stop {
+  margin-top: 2%;
+  background-color:rgb(199, 71, 71);
+  border: none;
+  color: white;
+  padding: 8.4% 12%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 150%;
+  margin-right: 2%;
+  width: 96.9%;
+}
+.control-stop:hover {
+  background-color:rgba(181, 89, 146, 0.558)
+}
+
+/* overlay css */
+#snackbar {
+  font-family: 'Oswald', sans-serif;
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+/* The Overlay (background) */
+.overlay {
+/* Height & width depends on how you want to reveal the overlay (see JS below) */   
+height: 100%;
+width: 0;
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0; 
+background-color: rgba(0,0,0,0.5);
+overflow-x: hidden; /* Disable horizontal scroll */
+transition: .01s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+z-index: 2;
+cursor: pointer;
+}
+
+
+/* Position the content inside the overlay */
+.overlay-content {
+position: relative;
+top: 6%; /* 25% from the top */
+width: 100%; /* 100% width */
+text-align: center; /* Centered text/links */
+margin-top: 20px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+padding: 8px;
+text-decoration: none;
+font-size: 36px;
+color: #818181;
+display: block; /* Display block instead of inline */
+transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+position:absolute;
+top: -1.2vh;
+right: 10px;
+font-size: 60px;
+size: 10px;
+width:10%;
+height:10%;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+.overlay a {font-size: 20px}
+.overlay .closebtn {
+  font-size: 35px;
+  top: 5px;
+  right: 35px;
+}
+}
+.monitorCreate {
+
+position:relative;
+margin: auto;
+width: 75%;
+height: 70vh;
+
+background-color: rgb(27, 27, 27);
+padding: 5px;
+text-align: center;
+
+
+}
+
+input[type=whole], select {
+width: 96%;
+
+padding: 12px 20px;
+margin: 8px 0;
+float: left;
+border: 1px solid rgb(100, 100, 100);
+border-radius: 4px;
+box-sizing: border-box;
+background-color: rgb(43, 43, 43);
+margin-left: 2%;
+margin-right: 2%;
+margin-top: 1%;
+margin-bottom: 2%;
+
+}
+
+/* input[type=text], select {
+width: 46%;
+
+padding: 12px 20px;
+margin: 8px 0;
+float: left;
+border: 1px solid rgb(100, 100, 100);
+border-radius: 4px;
+box-sizing: border-box;
+background-color: rgb(43, 43, 43);
+color: white;
+margin: 2%;
+
+} */
+
+button[type=submit] {
+width: 20%;
+
+background-color: #3a4cb5;
+border: none;
+color: white;
+padding: 12px 16px;
+font-size: 145%;
+cursor: pointer;
+float: right;
+border-width: .1%;
+margin-right: 1%;
+}
+
+button[type=submit]:hover {
+width: 20%;
+background-color: #253488;
+
+
+
+border: none;
+color: white;
+padding: 12px 16px;
+font-size: 145%;
+cursor: pointer;
+float: right;
+border-width: .1%;
+margin-right: 1%;
+}
+
+
+.form1 {
+width: 100%;
+height: 12%;
+/* overflow: hidden; */
+}
+.form2 {
+  width: 100%;
+  height: 60%;
+  
+  }
+select {
+border: 1px solid rgb(100, 100, 100);
+float: right;
+width: 48%;
+height: 9vh;
+margin: 2%;
+margin-top: -12.2vh;
+border: none;
+color: white;
+
+background-color: rgb(43, 43, 43);
+
+}
+
+
+
+
+body {
+  
+
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  
+  
+}

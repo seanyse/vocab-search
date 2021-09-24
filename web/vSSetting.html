@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>VocabSearch v1.0 - ALPHA</title>
+        <script type="text/javascript" src="eel.js"></script>
+        <link rel="stylesheet" href="vSSetting.css">
+        <script>
+            
+            function setstatus(status){
+            var old_status = document.getElementById("status").innerText
+            document.getElementById("status").innerText = old_status + status
+            }
+
+            function getInput() {
+                var proxy_status = document.getElementById("proxy_status").value;
+                var proxyList = document.getElementById("proxyList").value;
+                var fallback_status = document.getElementById("fallback_status").value;
+                var parameters = document.getElementById("parameters").value;
+
+                if(proxy_status.length > 0){
+                    localStorage.setItem("proxy_status", proxy_status);
+                }else{
+                    localStorage.setItem("proxy_status", "");
+                }
+
+                if(proxyList.length > 0){
+                    localStorage.setItem("proxyList", proxyList);
+                }else{
+                    localStorage.setItem("proxyList", "");
+                }
+
+                if(fallback_status.length > 0){
+                    localStorage.setItem("fallback_status", fallback_status);
+                }else{
+                    localStorage.setItem("fallback_status", "");
+                }
+
+                if(parameters.length > 0){
+                    localStorage.setItem("parameters", parameters);
+                }else{
+                    localStorage.setItem("parameters", "");
+                }
+            }
+            
+            window.onload = function load() {
+                document.getElementById("proxy_status").value = localStorage.getItem("proxy_status");
+                document.getElementById("proxyList").value = localStorage.getItem("proxyList");
+                document.getElementById("fallback_status").value = localStorage.getItem("fallback_status");
+                document.getElementById("parameters").value = localStorage.getItem("parameters");
+            };
+
+        </script>
+    </head>
+    
+   
+    <body>
+        <div class="menuDiv">
+            <table>
+                <button class="menuButton" onLoad="load()" onclick="window.location.href = 'vSHome.html'; getInput();" ><strong>Home</strong></button>
+                <button class="menuButton" onLoad="load()" onclick="window.location.href = 'vSSetting.html'; getInput();"><strong>Settings</strong></button>
+
+            </table>
+            
+          </div>
+          <div id="container">
+            <div id="inner">
+              <div class="viewHome">
+                <form>
+                    <p id="h1" style="text-align: center;"><strong>Proxy</strong></p>
+                    <select id="proxy_status" name="mode">
+                    <option value="False"><strong>False (Localhost)</strong></option>
+                    <option value="True"><strong>True (Requires Proxy List)</strong></option>
+                    </select>
+                </form>
+
+                <p id="h1" style="text-align:center"><strong>Proxy List</strong></p>
+                <textarea id="proxyList" class="proxyList" style="overflow: auto;" placeholder="pass:user@ip:port"></textarea>
+
+                
+              </div>
+                
+              
+              <div class="linkHome">
+                
+                <p id="h1" style="text-align: center;"><strong>Fallback (beta)</strong></p>
+                <select id="fallback_status" name="mode">
+                <option value="True"><strong>True</strong></option>
+                <option value="False"><strong>False</strong></option>
+                </select>
+                <p id="h1" style="text-align: center;"><strong>Search Parameters</strong></p>
+                
+                <textarea id="parameters" class="searchPara" style="overflow: auto;" placeholder="ap human geography"></textarea>
+              </div>
+                
+              
+              
+            </div>
+          </div>
+        
+    </body>
+</html>

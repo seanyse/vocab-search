@@ -1,0 +1,9 @@
+{
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "dependencies": {
+    "electron-window-manager": "^1.0.6"
+  }
+}

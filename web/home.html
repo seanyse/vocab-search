@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favela/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favela/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favela/favicon-16x16.png">
+    <link rel="manifest" href="favela/site.webmanifest">
+    <link rel="mask-icon" href="favela/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+    <link rel="stylesheet" href="home.css">
+    <title>VocabSearch</title>
+</head>
+
+<script type="text/javascript" src="eel.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="home.js"></script>
+
+
+    <body style="background-color: black; overflow: hidden; color:white;" >
+        <div class="menu" style="margin-top:1.5%;">
+
+            <div class="menu" >
+                
+                <img src="img/logo2.jpg"style="margin-left: .5%; margin-top: -.5%; float: left; margin-right: 1%; width:7%" class="logo">   
+    
+               
+                <!-- <button style="font-size:2vw;" class="search" onclick="openCreate();" style="float: right;"><b>New Monitor <i class="fas fa-plus"></i></b></button> -->
+               
+            
+                <h1 style="font-size:3.5vw; margin-top: 0;"><b>VocabSearch</b></h1>
+            
+                <h2 style="font-size:1.6vw; text-align: left;">Version: <span style="color: white;">1.1</span></h2>
+
+                <input style="float: right; width: 55%; margin-top: -5.5%; margin-right: 1%; font-family:Arial, FontAwesome;" id="searchin" class= "search" onkeydown="find()" type="text" placeholder="&#xF002; Search" name="search">
+                
+            
+            <div class="container">
+
+                
+                <div class="input">
+                    <textarea onChange = "add();" style="font-family: 'Oswald', sans-serif;" id="textin" class="vocab" placeholder="Input Here"></textarea>
+                </div>
+                    
+                    
+                <div class="result">
+                    <textarea onChange = "add();" style="font-family: 'Oswald', sans-serif;" id="textout" class="output" placeholder="Result Here "></textarea>
+                </div>
+                
+                <div class="statusContainer">
+                    <textarea onChange = "add();" style="font-family: 'Oswald', sans-serif;" disabled id="status" id = "status" class="status" placeholder="No Status To Display"></textarea>
+                </div>
+                
+            </div>
+            <div class="buttons">
+                <button class="home" onclick="window.location.href = 'home.html'"><i class="fas fa-home"></i></button>
+                <button class="home" onclick="openCreate();"><i class="fas fa-cog"></i></button>
+                <button class="control-start" onclick="startPython();"><i class="fas fa-play"></i></button>
+                <button class="control-stop" onclick="stopPython();"><i class="fas fa-stop"></i></button>
+                <button class="control" onclick="getPathToFilePython();"><i class="fas fa-file-import"></i></button>
+                <button class="control" onclick="savePython();"><i class="fas fa-file-export"></i></button>
+                <button class="control" onclick="copyPython();"><i class="fas fa-clipboard"></i></button>
+                
+
+            </div>
+            
+            <!-- overlay html div -->
+            <div id="myNav" class="overlay">
+
+    
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                    
+                    <div class="monitorCreate">
+                        <div class=form1>
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeCreate()">&times;</a>
+                            <h1 style="text-align: left; margin-left: 2%; margin-top: 3.2%; font-size: 150% ">Configure Settings</h1>
+                        </div>
+                        <div class="form2">
+                            <textarea onChange = "add();" id="proxyList" class="psetting" placeholder="Proxy List" style="font-family: 'Oswald', sans-serif;"></textarea>
+                            <textarea onChange = "add();" id="parameters" style="font-family: 'Oswald', sans-serif; margin-right:2%; width: 43%; height:85%; float: right; background-color:rgb(49, 49, 49);" class="psearchp" placeholder="Search Parameters"></textarea>
+                            
+                        </div>
+                            
+                        
+                        
+                        
+                        
+                        
+                        <button type="submit" class="submit" id="create" onclick="closeCreate(); parameters();" href="javascript:void(0)" style="margin: 2%; float: right; font-size: 4vh;"><b>Save</b></i></button>
+                        
+                        
+                        <input type="checkbox" id="proxy" name="proxy" value="proxy" style="margin-left: 2%; margin-top: 4%; float: left; font-size: 4vh;">
+                        <label for="proxy" style="margin-top: 3.8%; float: left; font-size: 3vh;">Use Proxy</label><br>
+
+                        <input type="checkbox" id="parameters" name="parameters" value="parameters" style="margin-top: 2%; font-size: 4vh;">
+                        <label for="fallback" style="margin-top: 2.5%; font-size: 3vh;">FallBack</label><br>
+                        
+                       
+                        
+                    </div>
+                </div>
+            
+            </div>
+            
+            <!-- Use any element to open/show the overlay navigation menu -->
+            <span onclick="openCreate()"></span>
+    </body>
+</html>

@@ -1,0 +1,253 @@
+
+body {
+overflow-y: hidden; 
+overflow-x: hidden; 
+border: 2px solid black;
+outline: rgb(63, 91, 104) solid 10px;
+}
+.menuDiv {
+background-color: rgb(40, 40, 44);    
+text-align: left;
+float: left;
+width: 20%;
+}
+#container {
+background-color: rgb(40, 40, 44);   
+overflow: hidden;
+width: 80%;
+height: 100%;
+
+}
+
+#inner {
+overflow: hidden;
+width: 100%;
+}
+
+.viewHome {
+float: left;
+background-color: rgb(56, 99, 116); /* Green */
+width: 49%;
+height: 65%;
+border-radius: 15px;
+border-style: solid;
+border-width: .1px;
+
+}
+.vocab{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    resize: none;
+    background-color:rgb(224, 244, 252);
+    color: white;
+    font-size: medium;
+    
+    }
+    
+.statusHome {
+float: right;
+background-color: rgb(177, 160, 87); /* Green */
+width: 100%;
+height: 15%;
+border-radius: 15px;
+border-style: solid;
+border-width: .1px;
+
+}
+
+.linkHome {
+float: left;
+background-color: rgb(116, 56, 113); /* Green */
+width: 50%;
+height: 65%;
+border-radius: 15px;
+border-style: solid;
+border-width: .1px;
+}
+
+.menuButton {
+background-color: rgb(56, 62, 116); /* Green */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+display: block;
+width: 95%;
+height: 50%;
+transition-duration: 0.4s;
+}
+.text {
+text-align: center;
+vertical-align: middle;
+font-size: 25px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+
+
+}
+h1{
+color:white
+}
+.menuButton:hover {
+background-color: #4CAF50;
+color: white;
+}
+.menuButton:hover {
+background-color: #4CAF50;
+color: white;
+}
+.controller {
+float: right;
+width: 80%;
+height: 20%;
+
+}
+.controllerButton {
+background-color:  rgb(56, 62, 116);
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+/* margin: 4px 2px; */
+cursor: pointer;
+/* display: block; */
+width: 19.5%;
+height: 17%;
+transition-duration: 0.4s;
+}
+.controllerButton:hover {
+background-color: #4CAF50;
+color: white;
+}
+.controllerButtonStop {
+background-color:  rgb(56, 62, 116);
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+/* margin: 4px 2px; */
+cursor: pointer;
+/* display: block; */
+width: 19.5%;
+height: 17%;
+transition-duration: 0.4s;
+}
+.controllerButtonStop:hover {
+background-color: #af5b4c;
+color: white;
+}
+.controllerButtonSave {
+background-color:  rgb(56, 62, 116);
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+/* margin: 4px 2px; */
+cursor: pointer;
+/* display: block; */
+width: 19.5%;
+height: 17%;
+transition-duration: 0.4s;
+}
+.controllerButtonSave:hover {
+background-color: #afad4c;
+color: white;
+}
+.controllerButtonCopy {
+background-color:  rgb(56, 62, 116);
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+/* margin: 4px 2px; */
+cursor: pointer;
+/* display: block; */
+width: 19.5%;
+height: 17%;
+transition-duration: 0.4s;
+}
+.controllerButtonCopy:hover {
+background-color: #af874c;
+color: white;
+}
+
+.result{
+width: 100%;
+height: 100%;
+padding: 5px;
+resize: none;
+background-color:rgb(121, 59, 118);
+color: white;
+font-size: medium;
+
+}
+.status{
+width: 100%;
+height: 100%;
+outline: none;
+resize: none;
+background-color:rgb(177, 160, 87);
+color: white;
+font-size: medium;
+white-space: normal;
+text-align: justify;
+text-align-last: center;
+
+}
+
+.status::placeholder{
+color: grey;
+line-height: 170%;
+text-align: center;
+overflow: hidden;
+font-size:medium;
+
+}
+.search::placeholder{
+color: grey;
+line-height: 225%;
+text-align: center;
+overflow: hidden;
+font-size:small;
+
+}
+::placeholder {
+color: grey;
+line-height: 1100%;
+text-align: center;
+overflow: hidden;
+font-size:large;
+}
+input[type=text] {
+width: 99.5%;
+height: 7%;
+padding: 2px;
+margin-top: 1px;
+font-size: 13px;
+border: none;
+box-sizing: border-box;
+border-radius: 3px;
+font-size: 13px;
+color: white;
+background-color: rgb(120, 29, 194);
+
+}
+
