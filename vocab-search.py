@@ -113,7 +113,7 @@ def normalSearch():
         print(len(result))
         
         print(fallback_status)
-        if len(result) < 20 and fallback_status == "True":
+        if len(result) < 20 and fallback_status == True:
 
             eel.setstatus("Proper Result Not Found, Reattempting 2")
             
@@ -136,7 +136,7 @@ def normalSearch():
             result = result_str.replace('[<span class="hgKElc"><b>',"").replace("</b>", "").replace("</span>]","").replace('[<span class="hgKElc">',"").replace("<b>","").replace(query,"")
             result = "*fb1" + result
 
-            if len(result) < 20 and fallback_status == "True":
+            if len(result) < 20 and fallback_status == True:
                 eel.setstatus("Proper Result Still Not Found, Reattempting 3")
 
                 url = ("https://www.google.com/search?q=" + query)
@@ -199,7 +199,7 @@ def proxySearch():
     }
     proxy_list = eel.proxy_list()()
     print(f"proxy_list = {proxy_list}")
-
+    proxy_list = proxy_list.strip()
     try:
         proxiesDict = {
         "http" : "http://" + proxy_list,    
@@ -275,7 +275,7 @@ def proxySearch():
             pass
         # instead of result being an empty bracket, its query does not exist
     
-        if len(result) < 20 and fallback_status == "True":
+        if len(result) < 20 and fallback_status == True:
 
             eel.setstatus("Proper Result Not Found, Reattempting 2")
             
@@ -297,7 +297,7 @@ def proxySearch():
             result = result_str.replace('[<span class="hgKElc"><b>',"").replace("</b>", "").replace("</span>]","").replace('[<span class="hgKElc">',"").replace("<b>","").replace(query,"")
             result = "*fb1" + result
 
-            if len(result) < 20 and fallback_status == "True":
+            if len(result) < 20 and fallback_status == True:
                 eel.setstatus("Proper Result Still Not Found, Reattempting 3")
 
                 url = ("https://www.google.com/search?q=" + query)

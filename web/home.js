@@ -55,6 +55,9 @@ function startPython(){
           var searchin = document.getElementById("searchin").value;
           var parameters = document.getElementById("parameters").value;
           var proxy = document.getElementById("proxyList").value
+         
+
+          
 
           if(textin.length > 0){
             localStorage.setItem("textin", textin);
@@ -95,7 +98,8 @@ function startPython(){
           else{
             localStorage.setItem("proxy", "");
           }
-      }
+
+      }   
 
 
   window.onload = function load() {
@@ -105,6 +109,7 @@ function startPython(){
       document.getElementById("searchin").value = localStorage.getItem("searchin");
       document.getElementById("parameters").value = localStorage.getItem("parameters");
       document.getElementById("proxyList").value = localStorage.getItem("proxy");
+
 
   };
   eel.expose(find);
@@ -135,14 +140,15 @@ function startPython(){
   }
   eel.expose(proxy_list);
   function proxy_list(){
-    var data = localStorage.getItem("proxyList");
+    var data = localStorage.getItem("proxy");
     return data
 
   }
   eel.expose(fallback_status);
   function fallback_status(){
-    var data = localStorage.getItem("fallback_status");
-    return data
+
+    var fallback_status = $('#fallback').is(':checked'); 
+    return fallback_status
 
   }
   eel.expose(parameters);
