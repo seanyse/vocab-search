@@ -11,7 +11,7 @@ let mainWindow
 function createWindow () {
   
   var mainWindow = new BrowserWindow({
-    backgroundColor: '#000000',
+    backgroundColor: '#FFFFFF',
     show: false,
     maximizable: false,
     minWidth: 500,
@@ -22,6 +22,8 @@ function createWindow () {
     // webPreferences: {
     //   devTools: false
     // }
+    
+
 
   });
 
