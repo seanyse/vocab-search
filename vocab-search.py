@@ -30,7 +30,6 @@ def normalSearch():
     
     
     # request headers
-    # headers taken from https://requests.readthedocs.io/en/master/user/quickstart/
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -185,7 +184,7 @@ def proxySearch():
     count = 1
     
     x = 1
-    fout.write("VocabSearch v1.0\n")
+    
     # request headers
     # headers taken from https://requests.readthedocs.io/en/master/user/quickstart/
     headers = {
@@ -433,6 +432,8 @@ def start_1():
 
 @eel.expose
 def getPathToFile():
+    eel.setstatus("File Explorer Opened Waiting User Response")
+
     root = tkinter.Tk()
     root.attributes("-topmost", True)
     root.withdraw()
@@ -451,6 +452,8 @@ def loadDataToTextin(file_path):
 
     print(data)
     eel.setDataFromFile(data)
+    eel.setstatus("Data Successfully Imported")
+
 
 @eel.expose
 # copy function used in this program cited below
