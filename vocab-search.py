@@ -10,7 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 import threading
 import pyperclip
-
+import ctypes
 
 global kill
 
@@ -18,8 +18,18 @@ eel.init('web')
 
 list = ['',]
 
+# hides console on exe building
+def hideConsole():
+  whnd = ctypes.windll.kernel32.GetConsoleWindow()
+  if whnd != 0:
+     ctypes.windll.user32.ShowWindow(whnd, 0)
 
-# some code in search function sourced and cited
+hideConsole()
+
+# error logging
+sys.stderr = open("error.log", "a")
+
+# main
 @eel.expose
 def normalSearch():
     fout = open('result.txt', 'w')
@@ -186,7 +196,6 @@ def proxySearch():
     x = 1
     
     # request headers
-    # headers taken from https://requests.readthedocs.io/en/master/user/quickstart/
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -196,6 +205,7 @@ def proxySearch():
         'Upgrade-Insecure-Requests': '1',
         'Accept-Encoding': 'identity'
     }
+    # proxy support
     proxy_list = eel.proxy_list()()
     print(f"proxy_list = {proxy_list}")
     proxy_list = proxy_list.strip()
@@ -228,6 +238,7 @@ def proxySearch():
                 # get session 
                 status = f"{datetime.datetime.now()} Requesting Query"
                 eel.setstatus(status)
+                # sent request
                 request = requests.Session()
                 result = request.get(url, headers=headers, proxies=proxiesDict)
                 break
@@ -291,8 +302,7 @@ def proxySearch():
                 result_str = result_str.replace('[<span class="hgKElc"><b>',"").replace("</b>", "").replace("</span>]","").replace('[<span class="hgKElc">',"").replace("<b>","").replace(query,"")
 
             print(f"result_str = {result_str}")
-            # result_soup = soup.find_all(class_="hgKElc")
-            # result_str = str(result_soup)
+            
             result = result_str.replace('[<span class="hgKElc"><b>',"").replace("</b>", "").replace("</span>]","").replace('[<span class="hgKElc">',"").replace("<b>","").replace(query,"")
             result = "*fb1" + result
 
@@ -324,14 +334,11 @@ def proxySearch():
     
         if kill == True:
             # quit function if user wants to stop
-            # sys.exit()
+            
             break
         else:
             pass
-        
-        # parsed.append(list[cocount_l = count_l + 1
-    # execution time
-    
+       
     
     fout.close()
     with open('result.txt','r') as read:
@@ -342,6 +349,7 @@ def proxySearch():
     eel.setOutput(output)
     eel.setstatus(f"-- Execution Complete, Thread Kill = {kill}, Took %s Seconds --" % (time.time() - start_time))
 @eel.expose
+
 # transfers data in list into result.txt
 def save(result):
 
@@ -387,6 +395,8 @@ def start():
     kill = False
     start = threading.Thread(target=start_1, args=()) 
     start.start()
+
+# initialize all variabkles
 @eel.expose
 def start_1():
     eel.setstatus("Checking Data")
@@ -425,11 +435,9 @@ def start_1():
     else:
         eel.setstatus("Data Collected, Starting Search")
         threading.Thread(target=proxySearch(), args=(), daemon=True).start()
-    # except:
-    #     status = f"{datetime.datetime.now()} Chromedriver Not Found"
-    #     eel.setstatus(status)
+   
 
-
+# pull text from txt file to gui
 @eel.expose
 def getPathToFile():
     eel.setstatus("File Explorer Opened Waiting User Response")
@@ -456,9 +464,9 @@ def loadDataToTextin(file_path):
 
 
 @eel.expose
-# copy function used in this program cited below
+
+# copy to clipboard
 def copy():
-    # copies to clipboard, copy pasted from stack overflow https://stackoverflow.com/questions/579687/how-do-i-copy-a-string-to-the-clipboard
     with open("result.txt", "r") as read:
         output = read.read()
         read.close()
@@ -467,7 +475,8 @@ def copy():
     spam = pyperclip.paste()
 
     eel.setstatus("Successfully Copied To Clipboard")
-    
+
+# search function for gui
 @eel.expose
 def py_find():
     kew = eel.getKeyWord()()
@@ -505,12 +514,11 @@ def py_find():
         eel.setOutput(data)
         eel.setstatus("Search Parameters Cleared")
 
-                
+ 
 @eel.expose
 def printnow(print):
     print(print)
     
 # sets gui size
-eel.browsers.set_path('electron', 'node_modules/electron/dist/electron')
-eel.start(mode='electron', size=(1075, 550), port=1904)
-
+# eel.browsers.set_path('electron', 'node_modules/electron/dist/electron')
+eel.start("home.html", mode='chrome', size=(1075, 550), port=1904)
